@@ -15,8 +15,6 @@ body {
 }
 
 header {
-  height: 100vh;
-
   #main-nav {
     border-bottom: 3px solid $main-color;
     .nav-container {
@@ -29,7 +27,7 @@ header {
         display: flex;
 
         li {
-          padding: 1.2rem 0.7rem;
+          padding: 1.2rem 1.5rem;
 
           a {
             border-bottom: 2px solid transparent;
@@ -106,6 +104,115 @@ header {
 
         &:hover {
           transform: scale(0.97);
+        }
+
+        & > i {
+          margin-right: 0.3rem;
+        }
+      }
+    }
+  }
+}
+
+#home {
+  &-a {
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 1rem;
+
+      & > div {
+        background: $light-color;
+      }
+
+      // to pull out
+      .span-2 {
+        border-radius: 15px;
+        grid-column: span 2;
+        display: grid;
+        grid-template-columns: 0.7fr 1fr;
+        gap: 0.4rem;
+
+        .img-container {
+          padding: 1.5rem;
+          img {
+            object-fit: cover;
+            border-radius: 15px;
+          }
+        }
+
+        div {
+          display: flex;
+          align-items: flex-start;
+          justify-content: center;
+          flex-direction: column;
+          padding: 0.7rem;
+
+          h2 {
+            text-transform: uppercase;
+            font-family: 'Staatliches';
+            margin-bottom: 0.3rem;
+          }
+
+          p {
+            font-size: 1rem;
+          }
+        }
+      }
+
+      .span-y-2 {
+        border-radius: 15px;
+        grid-row: span 2;
+        text-align: center;
+
+        .img-container {
+          padding: 1.5rem;
+          img {
+            object-fit: cover;
+            border-radius: 15px;
+          }
+        }
+
+        div {
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          flex-direction: column;
+          padding: 0.7rem;
+
+          h2 {
+            text-transform: uppercase;
+            font-family: 'Staatliches';
+            margin-bottom: 0.3rem;
+            text-align: center;
+          }
+
+          p {
+            font-size: 1rem;
+            padding: 0.3rem;
+          }
+        }
+      }
+
+      .span-1 {
+        border-radius: 15px;
+        padding: 0.5rem;
+        text-align: center;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+
+        h2 {
+          text-transform: uppercase;
+          font-family: 'Staatliches';
+          margin-bottom: 0.3rem;
+        }
+
+        p {
+          text-align: center;
+          font-size: 1rem;
+          padding: 0.3rem;
         }
       }
     }

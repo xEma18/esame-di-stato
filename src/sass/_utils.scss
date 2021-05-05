@@ -1,4 +1,5 @@
 // colors -> main-color, light-color, dark-color, medium-color
+$light-color: #c7f5f3;
 $main-color: #20b2aa;
 $medium-color: #788bff;
 $dark-color: #033f63;
@@ -14,6 +15,11 @@ a {
 ul {
   text-decoration: none;
   list-style: none;
+}
+
+img {
+  display: block;
+  width: 100%;
 }
 
 // utils
