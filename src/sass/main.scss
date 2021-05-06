@@ -12,6 +12,8 @@ body {
   font-family: 'Open Sans', sans-serif;
   height: 100vh;
   background: #fdfdfd;
+  position: relative;
+  // overflow: hidden;
 }
 
 header {
@@ -39,6 +41,25 @@ header {
               border-color: $main-color;
             }
           }
+        }
+      }
+
+      .btns {
+        .btn {
+          padding: 0.9rem 1.2rem;
+          text-transform: uppercase;
+          font-weight: bolder;
+          font-size: 0.8rem;
+          background: $v-light-color;
+          color: #555;
+          border-radius: 15px;
+
+          &:hover {
+            color: #000;
+          }
+        }
+        .login-btn {
+          margin-right: 0.3rem;
         }
       }
     }
@@ -87,10 +108,15 @@ header {
 
         &:hover {
           transform: scale(0.97);
+
+          i {
+            transform: rotate(360deg);
+          }
         }
 
         & > i {
           margin-right: 0.3rem;
+          transition: all 0.5s ease;
         }
       }
     }
@@ -147,5 +173,61 @@ header {
         }
       }
     }
+  }
+
+  &-b {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 35%;
+
+    background-color: white;
+    padding: 3rem;
+    border-radius: 15px;
+    box-shadow: 0 3rem 5rem rgba(0, 0, 0, 0.3);
+    z-index: 10;
+
+    animation: zoom-in 0.5s forwards;
+    transform-origin: left;
+
+    h2 {
+      margin-bottom: 2.5rem;
+      text-align: center;
+    }
+    input[type='text'],
+    input[type='password'] {
+      display: block;
+      width: 100%;
+      text-align: center;
+      border: none;
+      border-bottom: 2px solid $v-light-color;
+      padding: 0.6rem;
+      margin-bottom: 1.5rem;
+      transition: all 0.3s ease;
+
+      &:focus {
+        outline: none;
+        border-color: $medium-color;
+      }
+    }
+
+    input[type='submit'] {
+      width: 100%;
+      // margin: auto;
+      padding: 1rem;
+      text-transform: uppercase;
+    }
+    // }
+  }
+}
+
+// Keyframes
+@keyframes zoom-in {
+  from {
+    transform: scale(0) translate(-50%, -50%);
+  }
+  to {
+    transform: scale(1) translate(-50%, -50%);
   }
 }
