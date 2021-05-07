@@ -71,7 +71,7 @@ header {
     align-items: center;
     background: rgba(0, 0, 0, 0.4);
     // height: calc(93vh - 3px);
-    height: 50vh;
+    // height: 50vh;
     &::before {
       content: '';
       position: absolute;
@@ -214,11 +214,70 @@ header {
 
     input[type='submit'] {
       width: 100%;
-      // margin: auto;
       padding: 1rem;
       text-transform: uppercase;
+      margin-top: 1.5rem;
     }
     // }
+  }
+
+  &-c {
+    .content-container {
+      display: grid;
+      grid-template-columns: 15% 70% 15%;
+      height: 20rem;
+
+      .review-container {
+        position: relative;
+        overflow: hidden;
+        .review {
+          padding: 1rem;
+          transition: all 0.6s ease;
+          position: absolute;
+          top: 0;
+          left: 0;
+          width: 100%;
+          height: 100%;
+          .dati {
+            margin-bottom: 0.6rem;
+            display: flex;
+            align-items: center;
+
+            .img-container {
+              border-radius: 50%;
+              border: 3px solid $medium-color;
+              img {
+                width: 60px;
+                height: 60px;
+                // line-height: 40px;
+                object-fit: cover;
+                border-radius: 50%;
+              }
+            }
+
+            .nome {
+              margin-left: 1rem;
+              font-size: 1.3rem;
+            }
+          }
+        }
+      }
+
+      .arr {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        i {
+          color: $dark-color;
+          transition: all 0.3s ease;
+
+          &:hover {
+            transform: scale(0.92);
+          }
+        }
+      }
+    }
   }
 }
 
