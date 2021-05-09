@@ -5,6 +5,7 @@ $main-color: #20b2aa;
 $medium-color: #788bff;
 $dark-color: #033f63;
 $ibr-color: #2c99dd;
+$btn-color: #175880;
 $v-light-color: #c1c7ff;
 
 // img
@@ -85,6 +86,13 @@ img {
   z-index: 5;
 }
 
+.bottom-line {
+  width: 60px;
+  height: 3px;
+  margin: 0 auto 1.2rem auto;
+  background: $dark-color;
+}
+
 // mixin
 @mixin set-flex($justify) {
   display: flex;
@@ -111,6 +119,9 @@ img {
 .big {
   font-size: 2.7rem;
   margin-bottom: 0.4rem;
+
+  font-family: 'Staatliches', 'Arial';
+  font-weight: bolder;
 }
 
 .p-lead {

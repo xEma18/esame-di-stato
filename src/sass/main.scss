@@ -51,11 +51,12 @@ header {
           font-weight: bolder;
           font-size: 0.8rem;
           background: $v-light-color;
-          color: #555;
-          border-radius: 15px;
+          background: $btn-color;
+          color: #000;
+          color: #fff;
 
           &:hover {
-            color: #000;
+            opacity: 0.8;
           }
         }
         .login-btn {
@@ -66,6 +67,7 @@ header {
   }
 
   .content {
+    border-bottom: 3px solid $main-color;
     position: relative;
     display: flex;
     align-items: center;
@@ -93,8 +95,6 @@ header {
 
       .big {
         color: $main-color;
-        font-family: 'Staatliches', 'Arial';
-        font-weight: bolder;
       }
 
       .btn {
@@ -126,6 +126,13 @@ header {
 #home {
   &-a {
     background: $light-grey;
+    .big {
+      text-align: center;
+    }
+
+    .bottom-line {
+      margin-bottom: 1.6rem;
+    }
     .grid {
       display: grid;
       grid-template-columns: repeat(3, 1fr);
@@ -222,6 +229,9 @@ header {
   }
 
   &-c {
+    .big {
+      text-align: center;
+    }
     .content-container {
       display: grid;
       grid-template-columns: 15% 70% 15%;
@@ -245,7 +255,20 @@ header {
 
             .img-container {
               border-radius: 50%;
-              border: 3px solid $medium-color;
+              border: 3px solid transparent;
+
+              &.ibr {
+                border-color: $ibr-color;
+              }
+
+              &.pers {
+                border-color: $main-color;
+              }
+
+              &.str {
+                border-color: $medium-color;
+              }
+
               img {
                 width: 60px;
                 height: 60px;

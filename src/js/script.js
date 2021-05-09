@@ -13,6 +13,7 @@ const overlay = document.querySelector('.overlay');
 const loginScreen = document.querySelector('.login');
 const loginButton = document.querySelector('.login-btn');
 const navBar = document.querySelector('ul');
+const discoverBtn = document.querySelector('.btn-discover');
 
 const manipulateView = function (method) {
   overlay.classList[method]('hidden');
@@ -45,6 +46,12 @@ navBar.addEventListener('click', function (e) {
   if (!target) return;
 
   goTo(target.hash);
+});
+
+discoverBtn.addEventListener('click', function (e) {
+  e.preventDefault();
+
+  goTo('#servizi');
 });
 
 const goTo = function (hash) {
