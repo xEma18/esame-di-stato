@@ -1,0 +1,28 @@
+{
+  "name": "progetto-esame-maturita",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.html",
+  "scripts": {
+    "start xampp": "parcel ./index.html -d /Applications/XAMPP/xamppfiles/htdocs",
+    "start": "parcel ./index.html",
+    "build": "parcel build index.html ./dist"
+  },
+  "author": "Emanuele Di Giacomo",
+  "license": "ISC",
+  "devDependencies": {
+    "parcel-bundler": "^1.12.5",
+    "sass": "^1.32.12"
+  },
+  "dependencies": {
+    "@fortawesome/fontawesome-free": "^5.15.3",
+    "core-js": "^3.11.1",
+    "regenerator-runtime": "^0.13.7",
+    "smoothscroll-polyfill": "^0.4.4"
+  },
+  "browserslist": [
+    "defaults",
+    "not IE 11",
+    "maintained node versions"
+  ]
+}
